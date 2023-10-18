@@ -1,0 +1,103 @@
+@import "../../app.scss";
+
+.hero{
+
+    height: calc(100vh - 100px);
+    overflow: hidden;
+    background: linear-gradient(180deg, #0c0c1d, #111132);
+   position: relative;
+   z-index: 1;
+
+   .wrapper{
+    max-width: 1366px;
+    height: 100%;
+    margin: auto;
+    margin-left:100px ;
+
+    .text{
+        height: 100%;
+        width: 400px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: -10px;
+        font-family:sans-serif;
+
+        @include mobile{
+            height: 50%;
+            width: 100%;
+            gap: 10px;
+            align-items: center;
+            text-align: center;
+            padding-right: 60px;
+        }
+
+        h2{
+            font-size: 30px;
+            color: rebeccapurple;
+        }
+        h1{
+            font-size: 58px;
+
+            @include mobile{
+                font-size: 28px;
+            }
+        }
+        .buttons{
+            button{
+                padding: 20px;
+                border: 1px solid white;
+                border-radius: 10px;
+                background-color: transparent;
+                color: white;
+                margin-right: 20px;
+                margin-bottom: 30px;
+            }
+
+            button:hover{
+                background-color: white;
+                color: black;
+               transition: 0.5s;
+            }
+        }
+
+        img{
+            width: 50px;
+        }
+    }
+
+   }
+
+
+
+   .imageC{
+        height: 100%;
+        position: absolute;
+        top: 0;
+        right: 0;
+
+        @include mobile{
+            height: 50%;
+            width: 100%;
+            top: unset;
+            bottom: 0;
+        }
+
+        img{
+            width: 100%;
+            ;
+            object-fit: cover;
+        }
+   }
+
+   .slidingText{
+      position: absolute;
+      font-size: 50vh;
+      bottom: -120px;
+      white-space: nowrap;
+      color: #ffffff19;
+      width: 50%;
+      font-weight: bold;
+   }
+
+}
